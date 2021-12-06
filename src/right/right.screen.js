@@ -2,11 +2,11 @@ import React from "react";
 import { View, Text,} from 'react-native';
 
 
-export const LeftScreen = () => {
+export const RightScreen = () => {
 
     return (
         <>
-        <Text> Left Screen</Text>
+        <Text> Right Screen</Text>
                 
         </>
     )
