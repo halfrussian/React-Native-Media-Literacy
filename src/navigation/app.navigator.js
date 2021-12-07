@@ -1,6 +1,7 @@
 import React from "react";
 
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+//import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 
 import { CenterScreen } from "../center/center.screen";
 import { LeftScreen } from "../left/left.screen";
@@ -10,13 +11,17 @@ import { RightScreen } from "../right/right.screen";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
 
-const Tab = createBottomTabNavigator();
+//const Tab = createBottomTabNavigator();
+
+const Tab = createMaterialBottomTabNavigator();
 
 export const BottomNavigator = () => {
     return (
       <Tab.Navigator 
-      tabBarOptions={{
-     }}
+      //initialRouteName="Center"
+      activeColor="white"
+      inactiveColor="gray"
+      barStyle={{ backgroundColor: 'black' }}
       
       >
       {/* Left Icon */}
@@ -25,7 +30,7 @@ export const BottomNavigator = () => {
             component={LeftScreen} 
             options={{
               tabBarIcon: () => (
-                <MaterialCommunityIcons name="donkey" color={'blue'} size={40} />
+                <MaterialCommunityIcons name="donkey" color={'white'} size={27} />
               ),
             }}/>
 
@@ -38,7 +43,7 @@ export const BottomNavigator = () => {
           component={CenterScreen} 
           options={{
           tabBarIcon: () => (
-            <FontAwesome5 name="handshake" color={'purple'} size={30} />
+            <MaterialCommunityIcons name="set-center" color={'white'} size={27} />
           ),
         }}/>
 
@@ -48,7 +53,7 @@ export const BottomNavigator = () => {
             component={RightScreen} 
             options={{
               tabBarIcon: () => (
-                <MaterialCommunityIcons name="elephant" color={'red'} size={40} />
+                <MaterialCommunityIcons name="elephant" color={'white'} size={27} />
               ),
             }}/>
       </Tab.Navigator>
