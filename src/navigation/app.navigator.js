@@ -18,7 +18,7 @@ const Tab = createMaterialBottomTabNavigator();
 export const BottomNavigator = () => {
     return (
       <Tab.Navigator 
-      //initialRouteName="Center"
+      initialRouteName="Left"
       activeColor="white"
       inactiveColor="gray"
       barStyle={{ backgroundColor: 'black' }}

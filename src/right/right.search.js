@@ -5,39 +5,26 @@ import { StyleSheet, Text, SafeAreaView, ScrollView, StatusBar, View, Linking, A
 import { Button, Card, Title} from 'react-native-paper';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-export const Search = () => {
+export const RightSearch = () => {
 
     const [loading, setLoading] = useState(false)
     const [searchWord, setSearchWord] = useState('')
     const [dataArray, setDataArray] = useState([])
-    const [we, setWe] = useState({})
 
-function imFetchingTheNews() {
 
-    setLoading(true)
-     let newsUrl = 
-     'https://newsapi.org/v2/everything?q=' + 
-     searchWord + 
-     '&apiKey=1ab8fb15471c4e7d9a6bc028f5e3f2f4';
 
-     fetch(newsUrl)
-        .then(res => res.json())
-        .then(data => {
-           // console.log(data.articles[1].source.name)
-             setDataArray(data.articles)
-            setLoading(false)
-            //console.log(searchWord)        
-         })
-        
 
-    }
+
+
+
+
 
 return (
     <>
         <SearchContainer>
             <Searchbar
             style={styles.search}
-                placeholder="Search Left News "
+                placeholder="Search Right News"
                 onChangeText={(text) => {
                 setSearchWord(text)
                 }}
@@ -66,17 +53,16 @@ return (
          <>
         <Card style={styles.card} onPress={()=> {Linking.openURL(url)}}>
             <Card.Cover source={{ uri: urlToImage }} />
-            <Text style={styles.source}>Source: {newsStory.source.name}</Text>
+            <Text style={styles.source}>Source: {newsStory.source.name}</Text> 
+            
             <Title style={styles.cardTitle}>{title}</Title>
-            <MaterialCommunityIcons name="donkey" color={'white'} size={27} style={styles.donkey}/> 
+             <MaterialCommunityIcons name="elephant" color={'white'} size={27} style={styles.elephant}/>  
         </Card> 
-        
+    
         </>
       )
   })
 )} 
-
-
     </ScrollView>
 </SafeAreaView>
     </>
@@ -116,20 +102,22 @@ const styles = StyleSheet.create({
         padding: 16,
         fontFamily: 'Georgia',
         color: 'white',
+        
     },
     loading: {
-        flex: 1,
+       flex: 1,
        backgroundColor: 'black',
        justifyContent: 'center',
        alignItems: 'center',
        marginTop: '70%',
        marginBottom: '90%',
     },
-    donkey: {
-        padding: 8,
-        fontFamily: 'Georgia',
-        color: 'white',
-        marginLeft: '87%'
-      }
-    
+  elephant: {
+    padding: 8,
+    fontFamily: 'Georgia',
+    color: 'white',
+    marginLeft: '87%'
+  }
+
+   
 })

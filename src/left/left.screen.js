@@ -10,7 +10,7 @@ export const LeftScreen = () => {
         <>
             <View style={styles.back}>
                 <Search />
-                <Text style={styles.text}>No News Yet</Text>
+                <Text style={styles.text}>No Left Wing News Yet</Text>
             </View>
         </>
     )
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     },
     text: {
      color: 'white',
-     marginLeft: '35%', 
+     marginLeft: '30%', 
 
     }
 })
