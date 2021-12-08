@@ -9,26 +9,25 @@ export const Search = () => {
 
     const [loading, setLoading] = useState(false)
     const [searchWord, setSearchWord] = useState('')
-    const [finalinput, setFinalInput] = useState('')
     const [dataArray, setDataArray] = useState([])
 
 function imFetchingTheNews() {
     setLoading(true)
-    setFinalInput(searchWord)
-
-    let newsUrl = 'abc' + finalinput + 'dec'
+    
+    let newsUrl = 'https://newsapi.org/v2/everything?q=' + searchWord + '&apiKey=1ab8fb15471c4e7d9a6bc028f5e3f2f4'
 
     fetch(newsUrl)
         .then(res => res.json())
-        .then(newsData => {
-            setDataArray(newsData)
+        .then(data => {
+           // console.log(data.articles[1].source.name)
+            setDataArray(data.articles)
+            setLoading(false)
+          
+            //console.log(searchWord)
+           
         })
 }
 
-const hello = ()=> {
-    console.log('almost there ')
-}
-    
 return (
     <>
         <SearchContainer>
@@ -40,29 +39,40 @@ return (
                 }}
                 value={searchWord}
                 onSubmitEditing={() => {
-                    hello()
+                    imFetchingTheNews()
                   }}
             >
             </Searchbar>
-        </SearchContainer>
-
-
-<SafeAreaView> 
-    <ScrollView>
-    {loading ? (
-        <View style={styles.loading}>
             
-            <ActivityIndicator size="large" style={styles.indicate} />
-        </View>
-
+        </SearchContainer>
+      
+<SafeAreaView>
+    <ScrollView style={styles.cardContainer} contentContainerStyle={{paddingBottom:260}}>
+    {loading ? (
+        
+            <View style={styles.loading}>
+                <ActivityIndicator size="large" style={styles.indicate} />
+            </View>
+ 
 ) : (
-   
-null
 
- )}
+      dataArray.map((newsStory)=> {
+    const {  url, urlToImage, title} = newsStory
+    
+      return (
+         <>
+        <Card style={styles.card} onPress={()=> {Linking.openURL(url)}}>
+            <Card.Cover source={{ uri: urlToImage }} />
+            <Text style={styles.source}>Sigh</Text>
+            <Title style={styles.cardTitle}>{title}</Title>
+        </Card> 
+    
+        </>
+      )
+  })
+)} 
     </ScrollView>
 </SafeAreaView>
-
         {/* <SafeAreaView>
             <ScrollView style={styles.cardContainer} contentContainerStyle={{paddingBottom:260}}>
                 <Card style={styles.card} >
