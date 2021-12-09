@@ -10,9 +10,13 @@ export const Search = () => {
     const [loading, setLoading] = useState(false)
     const [searchWord, setSearchWord] = useState('')
     const [dataArray, setDataArray] = useState([])
-    const [we, setWe] = useState({})
+   
 
 function imFetchingTheNews() {
+
+        if(searchWord == '') {
+            return null
+        } else {
 
     setLoading(true)
      let newsUrl = 
@@ -29,6 +33,7 @@ function imFetchingTheNews() {
             //console.log(searchWord)        
          })
         
+        }
 
     }
 

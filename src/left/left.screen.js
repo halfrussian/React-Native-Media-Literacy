@@ -1,16 +1,14 @@
 import React from 'react';
-import { Search } from './left.search';
-
+import { LeftNewsCards } from './left.news.source.cards';
 import { StyleSheet, Text, SafeAreaView, ScrollView, StatusBar, View} from 'react-native';
 
 
 export const LeftScreen = () => {
-
+ 
     return (
         <>
             <View style={styles.back}>
-                <Search />
-                <Text style={styles.text}>No Left Wing News Yet</Text>
+                <LeftNewsCards />
             </View>
         </>
     )
@@ -19,12 +17,7 @@ export const LeftScreen = () => {
 const styles = StyleSheet.create({
     back: {
         flex: 1,
-       
         backgroundColor:'black',
     },
-    text: {
-     color: 'white',
-     marginLeft: '30%', 
-
-    }
+  
 })

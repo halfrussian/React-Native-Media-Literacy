@@ -1,30 +1,31 @@
-import React from "react";
+import * as React from 'react';
 
-//import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 
-import { CenterScreen } from "../center/center.screen";
-import { LeftScreen } from "../left/left.screen";
-import { RightScreen } from "../right/right.screen";
-
+import { LeftScreen } from '../left/left.screen';
+import { CenterScreen } from '../center/center.screen';
+import { RightScreen } from '../right/right.screen';
+//newsScreens
+import { CnnScreen } from '../news.screens.js/cnn';
 
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { FontAwesome5 } from '@expo/vector-icons';
 
-//const Tab = createBottomTabNavigator();
+// import { NavigationContainer } from '@react-navigation/native';
+// import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+
 
 const Tab = createMaterialBottomTabNavigator();
 
 export const BottomNavigator = () => {
-    return (
-      <Tab.Navigator 
-      initialRouteName="Left"
+ return (
+     <>
+ <Tab.Navigator 
+      initialRouteName="Right"
       activeColor="white"
       inactiveColor="gray"
       barStyle={{ backgroundColor: 'black' }}
-      
       >
-      {/* Left Icon */}
+          
         <Tab.Screen 
             name="Left" 
             component={LeftScreen} 
@@ -33,21 +34,14 @@ export const BottomNavigator = () => {
                 <MaterialCommunityIcons name="donkey" color={'white'} size={27} />
               ),
             }}/>
-
-
-      {/* Center Icon */}
-
         <Tab.Screen 
           name="Center"
-          
           component={CenterScreen} 
           options={{
           tabBarIcon: () => (
             <MaterialCommunityIcons name="set-center" color={'white'} size={27} />
           ),
         }}/>
-
-      {/* Right Icon */}
         <Tab.Screen 
             name="Right" 
             component={RightScreen} 
@@ -56,8 +50,8 @@ export const BottomNavigator = () => {
                 <MaterialCommunityIcons name="elephant" color={'white'} size={27} />
               ),
             }}/>
-      </Tab.Navigator>
-    );
-  }
+      </Tab.Navigator>   
+     </>
+ )
+}
 
- 
