@@ -35,7 +35,7 @@ export const FoxNews = () => {
                                 <Card.Cover source={{ uri: urlToImage }} />
                                 <Text style={styles.source}>Source: {newsStory.source.name}</Text>
                                 <Title style={styles.cardTitle}>{title}</Title>
-                                <MaterialCommunityIcons name="donkey" color={'white'} size={27} style={styles.donkey}/> 
+                                <MaterialCommunityIcons name="elephant" color={'white'} size={27} style={styles.donkey}/> 
                             </Card> 
                             </>
                         )

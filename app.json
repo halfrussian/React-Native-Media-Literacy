@@ -1,12 +1,12 @@
 {
   "expo": {
-    "name": "media-literacy",
-    "slug": "media-literacy",
+    "name": "Center",
+    "slug": "Center",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./icons/center-icon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./icons/center-splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
