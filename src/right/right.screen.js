@@ -1,6 +1,6 @@
 import React from 'react';
-import { RightSearch } from './right.search';
 
+import { RightNewsCards } from './right.news.source.cards';
 import { StyleSheet, Text, SafeAreaView, ScrollView, StatusBar, View} from 'react-native';
 
 
@@ -9,8 +9,8 @@ export const RightScreen = () => {
     return (
         <>
             <View style={styles.back}>
-                <RightSearch />
-                <Text style={styles.text}>No Right Wing News Yet</Text>
+                <RightNewsCards />
+            
             </View>
         </>
     )

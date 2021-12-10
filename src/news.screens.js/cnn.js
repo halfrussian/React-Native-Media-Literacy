@@ -71,7 +71,8 @@ const styles = StyleSheet.create({
     },
     source: {
         fontSize: 24,
-        padding: 16,
+        paddingTop: 16 ,
+        paddingLeft: 16 ,
         fontFamily: 'Georgia',
         color: 'white',
     },

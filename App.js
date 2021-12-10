@@ -25,23 +25,14 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <>
-        {/* <NavigationContainer>
+         <NavigationContainer>
             <BottomNavigator /> 
           
-        </NavigationContainer> */}
+        </NavigationContainer> 
    
 
 {/* Top Navigator */}
-    <NavigationContainer style={styles.back}>
-      <Stack.Navigator initialRouteName='Center'>
-        <Stack.Screen name="Center" component={CenterScreen}/>
-        <Stack.Screen name='Left' component={LeftScreen} />
-        <Stack.Screen name="Right" component={RightScreen}/>
-        <Stack.Screen name="CNN" component={CnnScreen}/>
-        <Stack.Screen name="Reuters" component={Reuters}/>
-        <Stack.Screen name="TheVerge" component={TheVerge}/>
-      </Stack.Navigator>    
-    </NavigationContainer>   
+   
 
 
 

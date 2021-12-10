@@ -1,5 +1,4 @@
 import React from "react";
-import { colors } from "../theme/colors";
 import { StyleSheet, Text, SafeAreaView, ScrollView, View, Image, TouchableOpacity} from 'react-native';
 import { Button } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
@@ -16,8 +15,7 @@ export const CenterScreen = () => {
                     <Text style={styles.para}>Always look at both sides of the story because the truth is usually in the center.</Text>
                     <Text style={styles.para}>Happy Exploring</Text>
                     <View style={styles.btnContainer}>
-                    <Button icon="donkey" mode="contained" style={styles.button} onPress={()=> navigation.navigate('Left')}>Left</Button>
-                    <Button icon="elephant" mode="contained" onPress={()=> navigation.navigate('Right')} style={styles.button}>Right</Button>
+                    <MaterialCommunityIcons name="set-center" color={'white'} size={100} />
                 </View>
             </View>
         </ScrollView>
@@ -27,7 +25,7 @@ export const CenterScreen = () => {
 
 const styles = StyleSheet.create({
     black: {
-        backgroundColor: '#383838',
+        backgroundColor: 'black',
       
     },
     para: {
@@ -52,9 +50,9 @@ const styles = StyleSheet.create({
         justifyContent: 'space-evenly'
     }, 
     otherBack: {
-        backgroundColor: '#383838',
+        backgroundColor: 'black',
         justifyContent: 'center',
-        marginTop: '8%',
+        marginTop: '24%',
         
     }
   });

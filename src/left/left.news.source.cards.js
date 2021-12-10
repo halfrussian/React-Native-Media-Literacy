@@ -4,11 +4,10 @@ import { StyleSheet, Text, SafeAreaView, ScrollView, View, Image, TouchableOpaci
 
 //navigatiing 
 
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 import { useNavigation } from '@react-navigation/native';
 
-import { CnnScreen } from '../news.screens.js/cnn';
+
 
 export const LeftNewsCards = () => {
     
@@ -29,23 +28,23 @@ export const LeftNewsCards = () => {
                 <TouchableOpacity onPress={()=> navigation.navigate('TheVerge')} >
                     <Image style={styles.image} source={{uri: 'https://seekvectorlogo.com/wp-content/uploads/2018/02/the-verge-vector-logo-small.png'}} />
                 </TouchableOpacity>
-                <TouchableOpacity onPress={()=> navigation.navigate('Right')} >
+                <TouchableOpacity onPress={()=> navigation.navigate('Buzzfbeed')} >
                     <Image style={styles.image} source={{uri: 'https://www.lionnewspaper.com/wp-content/uploads/2018/02/BF.jpg'}} />
                 </TouchableOpacity>
             </View>
             <View style={styles.back}>
-                <TouchableOpacity onPress={()=> navigation.navigate('Right')} >
+                <TouchableOpacity onPress={()=> navigation.navigate('ABC')} >
                     <Image style={styles.image} source={{uri: 'https://bottega.tech/wp-content/uploads/2019/07/abcnews-logo-5.jpg'}} />
                 </TouchableOpacity>
-                <TouchableOpacity onPress={()=> navigation.navigate('Right')} >
+                <TouchableOpacity onPress={()=> navigation.navigate('CBS')} >
                     <Image style={styles.image} source={{uri: 'https://images-na.ssl-images-amazon.com/images/I/51UjITm0Z-L.png'}} />
                 </TouchableOpacity>
             </View>
             <View style={styles.back}>
-                <TouchableOpacity onPress={()=> navigation.navigate('Right')} >
+                <TouchableOpacity onPress={()=> navigation.navigate('MSNBC')} >
                     <Image style={styles.image} source={{uri: 'https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/0001/6593/brand.gif?DunbXmzcg190SEzEpiQFHF5cEAA6.6Tw&itok=_v81AqQk'}} />
                 </TouchableOpacity>
-                <TouchableOpacity onPress={()=> navigation.navigate('Right')} >
+                <TouchableOpacity onPress={()=> navigation.navigate('BBC')} >
                     <Image style={styles.image} source={{uri: 'https://scontent-dfw5-1.xx.fbcdn.net/v/t1.18169-9/1926656_10151955586072217_265500303_n.png?_nc_cat=103&ccb=1-5&_nc_sid=174925&_nc_ohc=x4CFZ7ztiNQAX8C08q1&_nc_ht=scontent-dfw5-1.xx&oh=442ba3323688a701fdc62dbcc7379a52&oe=61D70371'}} />
                 </TouchableOpacity>
             </View>
@@ -58,7 +57,7 @@ export const LeftNewsCards = () => {
 
 const styles = StyleSheet.create({
     otherBack : {
-        marginTop: '16%',
+        marginTop: '8%',
         backgroundColor:'black',
         flex: 1,
         flexDirection: 'row',

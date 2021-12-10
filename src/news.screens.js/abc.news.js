@@ -3,12 +3,13 @@ import { StyleSheet, Text, ScrollView, StatusBar, View, Linking, ActivityIndicat
 import { Button, Card, Title} from 'react-native-paper';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-export const TheVerge = () => {
+export const ABC = () => {
     const [loading, setLoading] = useState(true)
     const [dataArray, setDataArray] = useState([])
 
+
     useEffect(()=> {
-        fetch('https://newsapi.org/v2/top-headlines?sources=the-verge&apiKey=1ab8fb15471c4e7d9a6bc028f5e3f2f4')
+        fetch('https://newsapi.org/v2/top-headlines?sources=abc-news&apiKey=1ab8fb15471c4e7d9a6bc028f5e3f2f4')
         .then(res => res.json())
         .then(data => {
             setDataArray(data.articles)
