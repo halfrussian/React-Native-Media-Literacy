@@ -27,15 +27,7 @@ export default function App() {
     <>
          <NavigationContainer>
             <BottomNavigator /> 
-          
         </NavigationContainer> 
-   
-
-{/* Top Navigator */}
-   
-
-
-
     </>
   );
 }
@@ -44,9 +36,6 @@ export default function App() {
 const styles = StyleSheet.create({
 
   back: {
-
       backgroundColor:'black',
-    
-      },
-
+      }
 })
