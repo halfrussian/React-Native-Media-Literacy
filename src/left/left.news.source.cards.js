@@ -28,7 +28,7 @@ export const LeftNewsCards = () => {
                 <TouchableOpacity onPress={()=> navigation.navigate('TheVerge')} >
                     <Image style={styles.image} source={{uri: 'https://seekvectorlogo.com/wp-content/uploads/2018/02/the-verge-vector-logo-small.png'}} />
                 </TouchableOpacity>
-                <TouchableOpacity onPress={()=> navigation.navigate('Buzzfbeed')} >
+                <TouchableOpacity onPress={()=> navigation.navigate('Buzzfeed')} >
                     <Image style={styles.image} source={{uri: 'https://www.lionnewspaper.com/wp-content/uploads/2018/02/BF.jpg'}} />
                 </TouchableOpacity>
             </View>
